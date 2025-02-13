@@ -8,6 +8,8 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: { xs: '16px', md: '24px', lg: '32px' },
+
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

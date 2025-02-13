@@ -5,6 +5,11 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --dark-gray: #212121;
+  --bright-gray: #2a2a2a;
+
+  --font-departure-mono: 'Departure Mono', monospace;
+  --font-geist-sans: 'Geist Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +19,97 @@
   }
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-departure-mono), monospace;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+@layer utilities {
+  .icon-hover {
+    @apply opacity-80 scale-110 transition-all duration-200 ease-in-out;
+  }
+
+  .file-clip {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 48px) 0,
+      100% 48px,
+      100% 100%,
+      0 100%,
+      0 0
+    );
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(to right, #73737320 1px, transparent 1px),
+      linear-gradient(to bottom, #73737320 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .radial-mask {
+    -webkit-mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      #000 80%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      #000 80%,
+      transparent 100%
+    );
+  }
+
+  .ascii-glow {
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  .text-xs {
+    font-size: 12px;
+  }
+
+  .text-sm {
+    font-size: 14px;
+  }
+
+  .text-base {
+    font-size: 16px;
+  }
+
+  .text-lg {
+    font-size: 18px;
+  }
+
+  .text-xl {
+    font-size: 20px;
+  }
+
+  .text-2xl {
+    font-size: 24px;
+  }
+
+  .text-3xl {
+    font-size: 30px;
+  }
+
+  .max-w-container {
+    max-width: 1440px;
+  }
 }

@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils/cn';
+import { cn } from '@/app/shared/lib/utils/cn';
 
 export const Section = ({
   children,

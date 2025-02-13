@@ -22,10 +22,18 @@
       "@/*": ["./*"],
       "@/icons/*": ["./app/shared/icons/*"],
       "@/logos/*": ["./public/logos/*"],
-      "@/components/*": ["./app/components/*"],
-      "@/lib/*": ["./app/lib/*"]
+      "@/components/*": ["./app/shared/components/*"],
+      "@/lib/*": ["./app/lib/*"],
+      "@/data/*": ["./app/shared/data/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/shared/animations/ASCIITextAnimaiton.jsx",
+    "app/shared/animations/LinesBackgroundAnimation.jsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,20 +1,4 @@
-import { Technology } from './technologies';
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  cover: string;
-  links: {
-    github_link?: string;
-    deployment_link?: string;
-  };
-  technologies: {
-    front_end?: Technology[];
-    back_end?: Technology[];
-  };
-  year_released?: number;
-};
+import { Project } from '../types/project';
 
 export const projects: Project[] = [
   {

@@ -14,7 +14,7 @@ export async function Projects() {
   console.log(projects.data);
 
   return (
-    <Section className='flex flex-col self-center px-md max-w-container h-[100vh]'>
+    <Section className='flex flex-col self-center gap-24 px-md max-w-container h-[100vh]'>
       <h1 className='flex text-[70px]'>Projects</h1>
       <div className='grid'>
         {projects.data.map((project: Project) => (
@@ -26,6 +26,9 @@ export async function Projects() {
             releaseDate={project.project_release_date}
             githubUrl={project.project_github_link}
             deploymentUrl={project.project_deployment_link}
+            language={project.language?.short_programing_lang_name}
+            frontend_teches={project.frontend_teches}
+            backend_teches={project.backend_teches}
           />
         ))}
       </div>

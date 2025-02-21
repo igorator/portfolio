@@ -33,7 +33,7 @@ export const ProjectCard = ({
   return (
     <div
       className={cn(
-        'flex flex-col max-w-[400px] bg-[#1a1a1a] p-[24px] gap-[16px] rounded-lg shadow-lg file-clip',
+        'flex flex-col max-w-[400px] bg-[#1a1a1a] p-[24px] gap-[16px] rounded-lg shadow-lg file-clip flex-grow justify-between',
       )}
     >
       <h2 className='font-bold text-xl'>{title}</h2>

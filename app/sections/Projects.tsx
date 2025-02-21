@@ -14,9 +14,9 @@ export async function Projects() {
   console.log(projects.data);
 
   return (
-    <Section className='flex flex-col self-center gap-24 px-md max-w-container h-[100vh]'>
+    <Section className='flex flex-col self-center gap-24 px-md max-w-container'>
       <h1 className='flex text-[70px]'>Projects</h1>
-      <div className='grid'>
+      <div className='flex flex-wrap justify-between gap-[24px]'>
         {projects.data.map((project: Project) => (
           <ProjectCard
             key={project.documentId}

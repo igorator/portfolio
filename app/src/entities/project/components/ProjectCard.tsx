@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { cn } from '@/app/shared/lib/utils/cn';
 
-const BASE_URL = process.env.STRAPI_BASE_URL;
-
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -42,7 +40,7 @@ export const ProjectCard = ({
         className='rounded-md w-full max-h-[200px] object-cover mix-blend-difference'
         width={250}
         height={200}
-        src={`${BASE_URL}${coverUrl}`}
+        src={coverUrl}
         alt={title}
       />
       <p className='text-gray-400'>{description}</p>

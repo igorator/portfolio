@@ -1,5 +1,6 @@
 import { Logo } from '@/components/Logo';
-import { BurgerIcon } from '@/icons/Burger';
+
+import { HiddenMenuButton } from './buttons/HiddenMenuButton';
 
 export const Header = ({ ...props }: React.HTMLProps<HTMLElement>) => {
   return (
@@ -9,7 +10,7 @@ export const Header = ({ ...props }: React.HTMLProps<HTMLElement>) => {
     >
       <Logo />
 
-      <BurgerIcon />
+      <HiddenMenuButton />
     </header>
   );
 };

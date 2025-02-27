@@ -1,8 +1,12 @@
 import { Section } from '@/components/Section';
 import { TextEncryptedAnimation } from '../shared/animations/TextEncryptedAnimation';
+import { navigation } from '../shared/data/config/navigation';
 
 export const Hero = () => (
-  <Section className='relative flex flex-col justify-around items-center px-lg py-[160px] max-w-container h-[100dvh]'>
+  <Section
+    className='relative flex flex-col justify-around items-center px-lg py-[160px] max-w-container h-[100dvh]'
+    id={navigation.hero.id}
+  >
     <TextEncryptedAnimation
       text='Good day!'
       element='h1'
